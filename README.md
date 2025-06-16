@@ -1,3 +1,8 @@
+![image](https://github.com/user-attachments/assets/8080ce7d-7058-4a71-a294-51e1593d71bd)
+
+
+
+
 # 🇮🇳 India Map Visualizer
 
 An interactive Streamlit application that lets you:
