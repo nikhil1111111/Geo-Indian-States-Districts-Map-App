@@ -1,0 +1,12 @@
+# Ignore virtual environments
+venv/
+
+# Ignore compiled python files
+__pycache__/
+*.py[cod]
+
+# Ignore data (keep it private)
+data/
+
+# Ignore Streamlit secrets or credentials if used
+.secrets/
