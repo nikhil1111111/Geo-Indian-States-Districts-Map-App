@@ -41,7 +41,7 @@ state-map-app/
 1. **Clone the repo**
 
 ```bash
-git clone https://github.com/yourusername/state-map-app.git
+git clone https://github.com/nikhil1111111/state-map-app.git
 cd state-map-app
 
 
