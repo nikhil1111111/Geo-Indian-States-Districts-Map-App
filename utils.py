@@ -1,5 +1,7 @@
 # utils.py
 
+import folium
+import branca.colormap as cm
 import geopandas as gpd
 import matplotlib.pyplot as plt
 from shapely.geometry import LineString, Point
@@ -74,3 +76,27 @@ def draw_map_lines_with_labels(
 
     ax.axis('off')
     return fig
+
+def add_hover_tooltips(map_obj, gdf, field_to_color, tooltip_fields, tooltip_aliases):
+    min_val = gdf[field_to_color].min()
+    max_val = gdf[field_to_color].max()
+    colormap = cm.linear.YlGnBu_09.scale(min_val, max_val)
+    colormap.caption = f"{field_to_color} Scale"
+
+    folium.GeoJson(
+        gdf,
+        style_function=lambda feature: {
+            'fillColor': colormap(feature['properties'][field_to_color]),
+            'color': 'black',
+            'weight': 1,
+            'fillOpacity': 0.7,
+        },
+        tooltip=folium.GeoJsonTooltip(
+            fields=tooltip_fields,
+            aliases=tooltip_aliases,
+            localize=True,
+            sticky=True
+        )
+    ).add_to(map_obj)
+
+    colormap.add_to(map_obj)
