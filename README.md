@@ -29,13 +29,13 @@ An interactive Streamlit application that lets you:
 ## 📁 Directory Structure
 state-map-app/
 │
-├── app.py # Main Streamlit App
-├── utils.py # Map drawing and tooltip logic
-├── requirements.txt # All Python dependencies
-├── README.md # This file
+├── app.py 
+├── utils.py 
+├── requirements.txt
+├── README.md 
 └── data/
-├── in.json # GeoJSON for Indian States
-└── output.geojson # GeoJSON for Indian Districts
+├── in.json 
+└── output.geojson 
 
 
 
